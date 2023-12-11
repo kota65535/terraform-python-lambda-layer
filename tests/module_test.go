@@ -1,7 +1,6 @@
 package tests
 
 import (
-	"runtime"
 	"testing"
 
 	"github.com/gruntwork-io/terratest/modules/terraform"
@@ -12,9 +11,6 @@ func TestModule(t *testing.T) {
 	// Arrange
 	terraformOptions := &terraform.Options{
 		TerraformDir: "../examples",
-		Vars: map[string]interface{}{
-			"name": runtime.GOOS,
-		},
 	}
 
 	// Act

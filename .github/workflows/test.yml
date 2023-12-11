@@ -19,6 +19,7 @@ jobs:
           JSON: ${{ toJSON(github) }}
 
   test:
+    concurrency: ${{ github.head_ref ||  github.ref }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
