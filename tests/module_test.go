@@ -20,5 +20,5 @@ func TestModule(t *testing.T) {
 	actual := make(map[string]interface{}, 0)
 	terraform.OutputStruct(t, terraformOptions, "lambda_layer", &actual)
 	assert.Equal(t, actual["layer_name"], "test")
-	assert.Equal(t, actual["compatible_runtimes"], "python3.11")
+	assert.Equal(t, actual["compatible_runtimes"], []interface{}{"python3.11"})
 }
