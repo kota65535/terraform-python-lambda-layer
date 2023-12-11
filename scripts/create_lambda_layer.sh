@@ -47,7 +47,7 @@ DEST_DIR="$(mktemp -d)"
   mkdir -p python
 
   # Run pip install command inside the official python docker image
-  docker run --rm -u "${UID}:${UID}" -v "${DEST_DIR}:/work" -w /work -v "${REQUIREMENTS_FILE}:/requirements.txt" "python:${PYTHON_VERSION}" pip install -r "/requirements.txt" -t ./python >&2
+  docker run --rm -u "${UID}:${UID}" -v "${DEST_DIR}:/work:rw" -w /work -v "${REQUIREMENTS_FILE}:/requirements.txt" "python:${PYTHON_VERSION}" pip install -r "/requirements.txt" -t ./python >&2
 
   # Remove unneeded files
   find python \( -name '__pycache__' -o -name '*.dist-info' \) -type d -print0 | xargs -0 rm -rf
