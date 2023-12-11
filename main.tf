@@ -5,7 +5,8 @@ locals {
 resource "terraform_data" "create_lambda_layer" {
   triggers_replace = [var.name, var.output_dir, file(var.requirements_file)]
   provisioner "local-exec" {
-    command = "'./${path.module}/scripts/create_lambda_layer.sh' ${var.python_version} ${var.requirements_file} ${local.output_path}"
+    command     = "'./${path.module}/scripts/create_lambda_layer.sh' ${var.python_version} ${var.requirements_file} ${local.output_path}"
+    interpreter = ["bash", "-c"]
   }
 }
 
