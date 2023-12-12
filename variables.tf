@@ -8,16 +8,16 @@ variable "python_version" {
   type        = string
 }
 
-variable "requirements_file" {
-  description = "requirements.txt file"
+variable "requirements_path" {
+  description = "requirements.txt file path"
   type        = string
   validation {
-    condition     = fileexists(var.requirements_file)
-    error_message = "The requirements.txt file does not exist"
+    condition     = fileexists(var.requirements_path)
+    error_message = "The requirements file does not exist"
   }
 }
 
 variable "output_path" {
-  description = "Output path"
+  description = "Output file path"
   type        = string
 }
