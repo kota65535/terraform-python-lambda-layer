@@ -30,9 +30,9 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | Lambda layer name | `string` | n/a | yes |
-| <a name="input_output_path"></a> [output\_path](#input\_output\_path) | Output path | `string` | n/a | yes |
+| <a name="input_output_path"></a> [output\_path](#input\_output\_path) | Output file path | `string` | n/a | yes |
 | <a name="input_python_version"></a> [python\_version](#input\_python\_version) | Python version | `string` | n/a | yes |
-| <a name="input_requirements_file"></a> [requirements\_file](#input\_requirements\_file) | requirements.txt file | `string` | n/a | yes |
+| <a name="input_requirements_path"></a> [requirements\_path](#input\_requirements\_path) | requirements.txt file path | `string` | n/a | yes |
 
 ## Outputs
 
