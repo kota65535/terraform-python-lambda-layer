@@ -17,8 +17,7 @@ variable "requirements_file" {
   }
 }
 
-variable "output_dir" {
-  description = "Output dir"
+variable "output_path" {
+  description = "Output path"
   type        = string
-  default     = null
 }

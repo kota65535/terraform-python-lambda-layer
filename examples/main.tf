@@ -3,4 +3,5 @@ module "lambda_layer" {
   name              = "test"
   python_version    = "3.11.0"
   requirements_file = "requirements.txt"
+  output_path       = "${path.root}/test-layer.zip"
 }
