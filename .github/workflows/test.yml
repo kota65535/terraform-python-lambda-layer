@@ -19,7 +19,7 @@ jobs:
           JSON: ${{ toJSON(github) }}
 
   test:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
